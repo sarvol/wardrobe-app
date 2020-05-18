@@ -8,7 +8,7 @@
     let overskrift = ""
     let item
     let typer = ["underdel", "overdel"]
-    let numItems = 100
+    let numItems = 50
 
   
             

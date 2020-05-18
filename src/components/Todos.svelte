@@ -55,7 +55,7 @@
 </div>
 
 <div class="text">
-    <h1 in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" out:fly="{{ x: 400, duration: 300 }}">Lag en liste over klær du trenger</h1>
+    <h1 in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" out:fly="{{ x: 400, duration: 300 }}">En liste = kontroll</h1>
     <img in:fly="{{ x: 400, duration: 1000, delay: 1200 }}" out:fly="{{ x: 400, duration: 300 }}" id="loginScreenPhoto" src="././img/mobil.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg" />
 
 </div>
@@ -80,13 +80,13 @@
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        height: 100%;
-        margin-bottom: 3rem;
+        height: auto;
+        
     }
     .todoBox {
         
         padding: 5rem;
-        height: 100%;
+        height: auto;
         
         background-color: #373F5D;
          
@@ -136,6 +136,7 @@
     font-size: 3.5rem;
     text-align: center;
     margin-bottom: 2rem;
+    margin-top: 4rem;
 }
 
  @media (max-width: 800px) {
@@ -151,6 +152,17 @@
 
     .todoBox {
         order: 2;
+    }
+ }
+
+ @media (max-width: 500px) {
+    
+    .todoBox {
+        padding: 2;
+    }
+
+    .todoInput {
+        width: 100%;
     }
  }
 

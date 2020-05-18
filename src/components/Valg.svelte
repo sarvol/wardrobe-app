@@ -7,7 +7,7 @@ import Weather from "./Weather.svelte"
 import LoaderCircle from "./LoaderCircle.svelte"
 import LogIn from ".././Login.svelte"
 import Loader from "./Loader.svelte"
-import Slideshow from './Slideshow.svelte'
+import About from './About.svelte'
 
 
 
@@ -62,7 +62,7 @@ export let menu = 1;
 			{:else if menu === 2}
 			<Add />
 			{:else if menu === 3}
-			<Slideshow  />
+			<About  />
 			{:else}
 			    <LoaderCircle />
 {/if}

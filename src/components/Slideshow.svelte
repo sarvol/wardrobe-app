@@ -1,6 +1,9 @@
 
 <script>
 import { fly, fade } from 'svelte/transition';
+
+
+
 </script>
 
 <main>
@@ -11,16 +14,7 @@ import { fly, fade } from 'svelte/transition';
             <div class="slide-wrapper">
                 
                 <div class="slides">
-                    <!--
-                    <article>1</article> 
-                    <article>2</article> 
-                    <article>3</article> 
-                    <article>4</article> 
-                    <article>5</article> 
-                    <article>6</article> 
-                    <article>7</article> 
-                    <article>8</article> 
-                    -->
+                    
                     
                     <article id="s-1"><img src="././img/weather.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg"/></article>
                     <article id="s-2"><img src="././img/weather.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg"></article>
@@ -32,59 +26,14 @@ import { fly, fade } from 'svelte/transition';
                     <article id="s-8"><img src="././img/weather.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg"/></article>
                     
                 </div>
-                <!-- <div class="buttons">
+                <div class="buttons">
                     <button id="prev" on:click="{prev}"></button>
                     <button id="next" on:click="{next}"></button>
-                </div> -->
-                
-            </div>    
-                 
-        </section>
-<section in:fly="{{ x: -500, duration: 1000, delay: 1300 }}" out:fly="{{ x: -400, duration: 300 }}" class="container container-2">
-            
-            <div class="slide-wrapper">
-                
-                <div class="slides">
-                    <!--
-                    <article>1</article> 
-                    <article>2</article> 
-                    <article>3</article> 
-                    <article>4</article> 
-                    <article>5</article> 
-                    <article>6</article> 
-                    <article>7</article> 
-                    <article>8</article> 
-                    -->
-                    
-                    <article id="s-1"><img src="././img/weather.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg"/></article>
-                    <article id="s-2"><img src="././img/weather.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg"></article>
-                    <article id="s-3"><img src="././img/weather.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg"/></article>
-                    <article id="s-4"><img src="././img/weather.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg"/></article>
-                    <article id="s-5"><img src="././img/weather.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg"/></article>
-                    <article id="s-6"><img src="././img/weather.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg"/></article>
-                    <article id="s-7"><img src="././img/weather.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg"/></article>
-                    <article id="s-8"><img src="././img/weather.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg"/></article>
-                    
                 </div>
-                 <!-- <div class="buttons">
-                    <button id="prev" on:click="{prev}"></button>
-                    <button id="next" on:click="{next}"></button>
-                </div> -->
                 
             </div>    
                  
         </section>
-        
-        <!-- <nav class="slide-nav">
-            <a href="#s-1">1</a>
-            <a href="#s-2">2</a>
-            <a href="#s-3">3</a>
-            <a href="#s-4">4</a>
-            <a href="#s-5">5</a>
-            <a href="#s-6">6</a>
-            <a href="#s-7">7</a>
-            <a href="#s-8">8</a>            
-        </nav> -->
 
 </div>
 <section class="img">
@@ -134,9 +83,7 @@ main {
 .container-1 {
     order: 1;
 }
-.container-2 {
-    order: 3;
-}
+
 
 .slide-wrapper {
     width: 80%;
@@ -169,25 +116,6 @@ main {
     
 }
 
-/* .slide-nav {
-    width: var(--bredde);
-    margin: 30px auto;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    grid-gap: 8px;
-}
-
-.slide-nav a {
-    text-decoration: none;
-    background-color: white;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
 
   h1 {
@@ -203,48 +131,6 @@ img {
      
 }
 
-
-/* buttons */
-/* 
-.buttons button#next {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-  }
-
-	.buttons button#next:before {
-			 font-family: 'FontAwesome';
-			content:"\f054";
-			padding:0 4px 0 6px;   
-	} 
-	
-  .buttons button#prev {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-  }
-
-	.buttons button#prev:before {
-			 font-family: 'FontAwesome';
-			content:"\f053";
-			padding:0 6px 0 4px;   
-	} 
-	
-  .buttons button {
-    border: 2px solid #ddd;
-    background-color: transparent;
-    color: #ddd;
-    cursor: pointer;
-    padding: 13px 15px;
-    border-radius: 50%;
-    outline: none;
-  }
-
-  .buttons button:hover {
-    border: 2px solid #fff;
-    background-color: #fff;
-    color: #333;
-  } */
 
 
     

@@ -1,3 +1,47 @@
+
+# Wardrobe App || Svelte app that uses firestore and openweather api 
+| App that gives the user a way to organize their wardrobe by upload pictures of their clothes, check the weather and make  lists on clothes they need/changes.  
+
+## Quick start 
+
+*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+
+Install the dependencies...
+
+```bash
+npm install
+```
+
+...then start [Rollup](https://rollupjs.org):
+
+```bash
+npm run dev
+```
+
+## Other downloads used 
+
+Install them...
+
+```bash
+npm i svelte-typewriter
+
+npm i axios
+```
+
+## API
+*To make your own version, change the API keys
+Get your firestore API:[firebase] (https://console.firebase.google.com/)
+Get your openweather API: [OpenweatherAPI] (https://openweathermap.org/appid)
+
+
+
+
+
+
+## General svelte app info
+
+
+
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
@@ -13,7 +57,7 @@ npx degit sveltejs/template svelte-app
 cd svelte-app
 ```
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
+
 
 
 ## Get started

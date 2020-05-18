@@ -5,11 +5,9 @@
 
 
 
-<main> 
-<div class="main-circle">
-        <div class="circle"></div>
-</div>
-</main>
+ 
+<div class="loader">Loading...</div>
+
 
 
 
@@ -18,56 +16,73 @@
 
 <style>
 
-main {
-	display: grid;
-	margin-top: 4rem;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    grid-template-columns: 1fr 2fr;
-		
-}
-
-
-
-.main-circle{
-  width:330px;
-  height:330px;
-  border:2px solid #373F5D;
-  position:absolute;
-  top:200%; bottom:0; left:0;right:50%;
-  margin:auto;
-  border-radius:50%; 
-}
-
-.circle{
-  width:40px;
-  height:40px;
-  background:#62C5CA;
-  border-radius:50%;
-  position:absolute;
-  top:0; bottom:0; left:0;right:0;
-  overflow:hidden;
-  margin:auto;
-  animation: circle 6s linear infinite;
-}
-
-@keyframes circle{
-  0%{
-    transform:rotate(0deg)
-              translate(-165px)
-              rotate(0deg);
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
   
+}
+.loader {
+  color: #F75D5D;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 55px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: '';
+}
+.loader:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: #373F5D;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.1em 5.1em;
+  transform-origin: 5.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+.loader:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: #373F5D;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 4.9em;
+  -webkit-transform-origin: 0.1em 5.1em;
+  transform-origin: 0.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  100%{
-    transform:rotate(360deg)
-              translate(-165px)
-              rotate(-360deg);
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
-
-@media (max-width: 800px) {
-
-
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 </style>

@@ -79,7 +79,7 @@ let rain =""
 
         <div in:fade="{{ duration: 1000, delay: 1000 }}" out:fly="{{ x: -400, duration: 300 }}" id="boxTemp"> 
             <div> 
-        <p ><b> Weather:</b> </p>
+        <p ><b> Vær:</b> </p>
         <p> {weather} </p>
     </div>
 
@@ -90,7 +90,7 @@ let rain =""
         <p> {Math.round(temp)} C° </p>
     </div>
     <div> 
-        <p ><b> Føles:</b> </p>
+        <p ><b> Føles som:</b> </p>
         <p> {Math.round(feelLike)} C° </p>
     </div>
 
@@ -133,9 +133,7 @@ let rain =""
        
         background: rgb(227,241,248);
         background: linear-gradient(0deg, rgba(227,241,248,1) 12%, rgba(255,255,255,0.9290091036414566) 73%);
-        height: 100%;
-         /* margin-bottom: 2rem; */
-        
+        height: 100%;  
     }
 
     h2 {
@@ -182,11 +180,7 @@ let rain =""
 
     .weatherBox {
         background-color: #373F5D;
-        
         height: 100%;
-         
-        
-         /* border-radius: 0 5rem 0 5rem ; */
     }
 
     #weatherThinking {
@@ -217,18 +211,15 @@ let rain =""
 }
 
 
- 
-
     @media (max-width: 1100px) {
         main {
 	    grid-template-columns: 1fr; 
     }
 
     .weatherBox {
-        width: 25rem;
-        height: 35rem;
+        width: 100%;
         order: 2;
-        margin: auto auto;
+       
     }
 
     #weatherThinking {
@@ -241,10 +232,9 @@ let rain =""
     @media (max-width: 800px) {
     
     .weatherBox {
-        width: 25rem;
-        height: 35rem;
+        
         order: 2;
-        margin: auto auto;
+        margin: 0;
         margin-top: 3rem;
     }
 
@@ -254,34 +244,23 @@ let rain =""
         
     }
 
-
-
+    
     }
 
-
-    /* @media (max-width: 400px) {
+    @media (max-width: 500px) {
     
     .weatherBox {
-        width: 20rem;
-        height: 30rem;
-        order: 2;
-        margin: auto auto;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-    }
-
-    #weatherThinking {
         
-        width: 70%;
-        
+       width: 100vw;
+        margin: 0;    
+    }
+    #boxTemp {
+	    grid-template-columns: repeat(2, 1fr) ; 
     }
 
- #ikon {
-        transform: translateY(-4rem) translateX(8rem);
     }
 
 
-    } */
 
     
   </style>
