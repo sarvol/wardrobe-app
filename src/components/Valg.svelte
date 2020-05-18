@@ -98,11 +98,7 @@ export let menu = 1;
 	z-index: 1;
 	margin: 0;
     background-color: white;
-    
-  
     justify-content: center;
-    /* align-items: center; */
-    
     position: -webkit-sticky; 
     position: sticky;
     top: 4.01rem;
@@ -117,8 +113,6 @@ export let menu = 1;
     background-color: white;
     height: 100%;
 }
-
-
 
 
 nav.menu div a {
@@ -141,13 +135,6 @@ nav.menu div a:hover {
         
     }
 }
-
-
-
-
-
-
-
 
 
 

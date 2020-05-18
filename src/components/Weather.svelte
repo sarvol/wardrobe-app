@@ -55,7 +55,11 @@ let rain =""
    <main>
    
 
-   <div in:fly="{{ x: -400, duration: 1000, delay: 1000 }}" out:fly="{{ x: -400, duration: 300 }}"  class="weatherBox">
+   <div 
+        in:fly="{{ x: -400, duration: 1000, delay: 1000 }}" 
+        out:fly="{{ x: -400, duration: 300 }}"  
+        class="weatherBox"
+   >
         <h2>Sjekk været der du er</h2>
         <form class="forminput" on:submit|preventDefault={submitHandler}>
             <input bind:value={city} placeholder="Skriv inn by" />
@@ -63,9 +67,12 @@ let rain =""
         </form>
 
     {#if incomeData!==null}
-    
         
-        <div in:fade="{{ duration: 1000, delay: 1500 }}" out:fly="{{ x: -400, duration: 300 }}" id="city">
+        <div 
+            in:fade="{{ duration: 1000, delay: 1500 }}" 
+            out:fly="{{ x: -400, duration: 300 }}" 
+            id="city"
+        >
             <div>
                 <p style="margin:0;">{city}  </p>   
             </div>
@@ -77,7 +84,11 @@ let rain =""
         </div>
 
 
-        <div in:fade="{{ duration: 1000, delay: 1000 }}" out:fly="{{ x: -400, duration: 300 }}" id="boxTemp"> 
+        <div 
+            in:fade="{{ duration: 1000, delay: 1000 }}" 
+            out:fly="{{ x: -400, duration: 300 }}" 
+            id="boxTemp"
+        > 
             <div> 
         <p ><b> Vær:</b> </p>
         <p> {weather} </p>
@@ -117,8 +128,17 @@ let rain =""
     </div>
 
     <div>
-        <h1 in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" out:fly="{{ x: 400, duration: 300 }}">Husket å sjekke været?</h1>
-        <img in:fly="{{ x: 500, duration: 1000, delay: 1400 }}" out:fly="{{ x: 400, duration: 300 }}" id="weatherThinking" src="././img/weather.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg" />
+        <h1 
+            in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" 
+            out:fly="{{ x: 400, duration: 300 }}"
+        >
+            Husket å sjekke været?
+        </h1>
+        <img 
+            in:fly="{{ x: 500, duration: 1000, delay: 1400 }}" 
+            out:fly="{{ x: 400, duration: 300 }}" 
+            id="weatherThinking" src="././img/weather.png" alt="illustrasjon av jente som tenker på været" 
+        />
 
     
     </div>
@@ -130,7 +150,6 @@ let rain =""
     main {
         display: grid;
 	    grid-template-columns: 1fr 2fr;
-       
         background: rgb(227,241,248);
         background: linear-gradient(0deg, rgba(227,241,248,1) 12%, rgba(255,255,255,0.9290091036414566) 73%);
         height: 100%;  
@@ -141,15 +160,12 @@ let rain =""
         font-size: 1.2rem;
         font-weight: 300;
         margin-top: 6rem;
-
     }
 
     input, button {
         outline: none;
         margin-top: 0.2rem;
         padding: 1rem;
-       
-
     }
 
     button {
@@ -177,7 +193,6 @@ let rain =""
     }
 
     
-
     .weatherBox {
         background-color: #373F5D;
         height: 100%;
@@ -190,8 +205,7 @@ let rain =""
     #boxTemp {
         display: grid;
 	    grid-template-columns: repeat(3, 1fr) ;
-        color: white;
-        
+        color: white;    
     }
 
     #city {
@@ -238,10 +252,8 @@ let rain =""
         margin-top: 3rem;
     }
 
-    #weatherThinking {
-        
-        width: 70%;
-        
+    #weatherThinking {  
+        width: 70%;   
     }
 
     
@@ -249,8 +261,7 @@ let rain =""
 
     @media (max-width: 500px) {
     
-    .weatherBox {
-        
+    .weatherBox {  
        width: 100vw;
         margin: 0;    
     }

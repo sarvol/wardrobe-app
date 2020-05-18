@@ -24,20 +24,19 @@ let wardrobe = db.collection("wardrobe")
 
 </script>
 
-
-
 <main>
+
+
+<div> 
 <section 
 in:fly="{{ x: -500, duration: 1000, delay: 1000 }}" out:fly="{{ x: -400, duration: 300 }}"   
-class="container" >
+class="container container-1" >
             
             <div class="slide-wrapper">
                 
                 <div class="slides">
-                    {#each clothes as item} 
-                 
-                 <article><Slides id={item.id} data={item.data() } /></article>
-                
+                    {#each clothes as item, i} 
+                <Slides id={item.id} data={item.data() } />
                     
                 {:else}
                 <div class="loader">
@@ -67,15 +66,26 @@ class="container" >
                  
         </section>
 
+</div>
+<section class="img">
+        <div>
+        <h1 in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" out:fly="{{ x: 400, duration: 300 }}">Finn nye kombinasjoner</h1>
+        <img in:fly="{{ x: 500, duration: 1000, delay: 1400 }}" out:fly="{{ x: 400, duration: 300 }}" id="weatherThinking" src="././img/mobil.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg" />
+    
+    </div>
+
+</section>
+
+
+
+
 </main>
 
-
 <style>
+    :root {
+    --height: 20rem;
+    --width: 40rem;
 
-:root {
-    --bredde: 30rem;
-     --hoyde: 30rem;
-   
 }
 
 * {
@@ -84,50 +94,74 @@ class="container" >
 }
 
 
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+    padding: 1rem;
+    /* height: 100%; */
+
+}
 
 .container {
 
-    width: var(--bredde); 
-    height:  var(--hoyde); 
-       
+    width: var(--width);    
+    height: var(--height) ;    
     margin: auto;
     border: 4px solid white;
 }
 
+.container-1 {
+    order: 1;
+}
+
+
 .slide-wrapper {
     width: 100%;
-    height:  var(--hoyde);
+    height: 100%;
+    margin: auto auto;
     overflow: auto;
-    scroll-snap-type: x mandatory;
+    /* scroll-snap-type: x mandatory; */
+    border: 1px solid black;
 }
 
 .slides {
-    width: 800%;
-    height:  var(--hoyde);
-    background-color: orange;
+    width: 2000%;
+    height: 100%;
+    background-color: #eee;
     display: grid;
-    grid-template-columns: repeat(200, 1fr);
-    grid-auto-rows: 260px;
+    grid-template-columns: repeat(17, 1fr);
+    grid-auto-rows: 100rem;
     
 }
 
-.slides article {
+.slides {
     scroll-snap-align: center;
+    scroll-behavior: smooth;
 }
 
-.slides article img {
-    width: var(--bredde);
-    height: var(--hoyde);
+.slides  {
+    width: 100%;
+    height: var(--height);
     object-fit: cover;
-    object-position: bottom center;
+    object-position:  center;
+    
 }
 
 
 
+  h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-
-/* navigation */
-
+.img img {
+     width: 60%; 
+     
+}
 
 nav {
 		display: grid;
@@ -176,4 +210,5 @@ nav {
   -webkit-transform: rotate(-45deg);
 }
 
+    
     </style>

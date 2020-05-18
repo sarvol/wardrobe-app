@@ -51,9 +51,17 @@ const logout = () => {
 				<!-- <p><b>Logget inn som: </b>{user.displayName}</p> -->
 				<button on:click={logout}>Logg ut</button>
 			</div>
-			<div in:fly="{{ x: -400, duration: 1000, delay: 1000 }}" out:fly="{{ x: -400, duration: 300 }}" class="photo">
+			<div 
+				in:fly="{{ x: -400, duration: 1000, delay: 1000 }}" 
+				out:fly="{{ x: -400, duration: 300 }}" 
+				class="photo"
+			>
 				<img id="loginScreenPhoto" src="././img/tenker.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg" />
-				<div in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" out:fly="{{ x: 400, duration: 300 }}" class="tekst">
+				<div 
+					in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" 
+					out:fly="{{ x: 400, duration: 300 }}" 
+					class="tekst"
+				>
 					<Typewriter  loop interval={200}>
 						<h1 id="typing" >Profil</h1>
 					</Typewriter>
@@ -63,8 +71,6 @@ const logout = () => {
 			</div>
 			<Valg />
 			
-		
-		<!-- <Add /> -->
 	{:else }
 		<LogIn />
 	{/if}
@@ -102,8 +108,7 @@ button:hover  {
 main {
 	display: grid;
 	margin-top: 4rem;
-	margin-bottom: 0;
-		
+	margin-bottom: 0;		
 }
 
 .login {
@@ -116,8 +121,6 @@ main {
 	margin-top: 4rem;
 	margin-bottom: 0;
 	padding-top: 3rem;
-	
-	/* border: 1px solid black; */
 	width: 100%;
 	
 }
@@ -171,8 +174,6 @@ h3 {
 
 .photo {
 	grid-template-columns: 1fr;
-	
-	
 }
 
 

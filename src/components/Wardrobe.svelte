@@ -57,14 +57,24 @@
 
 
 <svelte:head>
-	<title>Wardrobe</title>
+	<title>C.L.E. Wardrobe</title>
 </svelte:head>
 
 <main class="klesskap"> 
 
 <section class="spanAll">
-    <h1 in:fly="{{ x: -400, duration: 1000, delay: 500 }}" out:fly="{{ x: -400, duration: 300 }}">Dine Klær</h1>
-    <div in:fly="{{ x: -400, duration: 1000, delay: 600 }}" out:fly="{{ x: -400, duration: 300 }}" class="buttons">
+    <h1 
+        in:fly="{{ x: -400, duration: 1000, delay: 500 }}" 
+        out:fly="{{ x: -400, duration: 300 }}"
+    >
+        Dine Klær
+    </h1>
+
+    <div 
+    in:fly="{{ x: -400, duration: 1000, delay: 600 }}" 
+    out:fly="{{ x: -400, duration: 300 }}" 
+    class="buttons"
+    >
         <button on:click={ () => { typer=["underdel", "overdel"]; oppdater(); } } >Alle</button>
         <button on:click={ () => { typer=["overdel"]; oppdater(); } } >Overdel</button>
         <button on:click={ () => { typer=["underdel"]; oppdater(); } } >Underdel</button> 
@@ -74,7 +84,10 @@
 </section>
 
 
-<nav in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" out:fly="{{ x: -400, duration: 300 }}">
+<nav 
+    in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" 
+    out:fly="{{ x: -400, duration: 300 }}"
+>
 		<button on:click={prev} disabled={disabledPrev}>
             <p><i class="arrow left"></i></p>
         </button>	
@@ -85,7 +98,11 @@
 </nav>
 
 
-<div in:fade="{{ duration: 1000, delay: 1100 }}" out:fade="{{ duration: 300 }}" class="clothing">
+<div 
+    in:fade="{{ duration: 1000, delay: 1100 }}" 
+    out:fade="{{ duration: 300 }}" 
+    class="clothing"
+>
 {#each currentItems as item, i} 
    <Item id={item.id} data={item.data() } />
     
@@ -243,9 +260,9 @@ h1 {
 }
 
 nav {
-		display: grid;
-		grid-template-columns: 1fr auto 1fr;
-		width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+		
 	}
 
 .clothing {

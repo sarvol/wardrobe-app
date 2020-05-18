@@ -35,7 +35,11 @@
 
 <main>
 
-<div in:fly="{{ x: -400, duration: 1000, delay: 1100 }}" out:fly="{{ x: -400, duration: 300 }}" class="todoBox">
+<div 
+    in:fly="{{ x: -400, duration: 1000, delay: 1100 }}" 
+    out:fly="{{ x: -400, duration: 300 }}" 
+    class="todoBox"
+>
     <h3>Legg til</h3>
    
    <div class="todoInput">
@@ -43,7 +47,11 @@
         <button class="add" on:click={add}>Add</button>
    </div>
 
-<div in:fly="{{ x: -400, duration: 1000, delay: 1200 }}" out:fly="{{ x: -400, duration: 300 }}" class="tasks">
+<div 
+    in:fly="{{ x: -400, duration: 1000, delay: 1200 }}" 
+    out:fly="{{ x: -400, duration: 300 }}" 
+    class="tasks"
+>
     <ul>
         {#each $todos as todo}
 
@@ -55,8 +63,18 @@
 </div>
 
 <div class="text">
-    <h1 in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" out:fly="{{ x: 400, duration: 300 }}">En liste = kontroll</h1>
-    <img in:fly="{{ x: 400, duration: 1000, delay: 1200 }}" out:fly="{{ x: 400, duration: 300 }}" id="loginScreenPhoto" src="././img/mobil.png" alt="illustrasjon av jente som tenker på hva hun skal ha på seg" />
+    <h1 
+        in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" 
+        out:fly="{{ x: 400, duration: 300 }}"
+    >
+        En liste = kontroll
+    </h1>
+    <img 
+        in:fly="{{ x: 400, duration: 1000, delay: 1200 }}" 
+        out:fly="{{ x: 400, duration: 300 }}" 
+        id="loginScreenPhoto" src="././img/mobil.png" 
+        alt="illustrasjon av mobil" 
+    />
 
 </div>
 
@@ -80,16 +98,12 @@
     main {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        height: auto;
-        
+        height: auto;   
     }
     .todoBox {
-        
         padding: 5rem;
         height: auto;
-        
-        background-color: #373F5D;
-         
+        background-color: #373F5D; 
     }
 
     h3 {
@@ -111,8 +125,6 @@
         color: #F75D5D;
         border: #F75D5D;
         width: 5.5rem;
-        
-
     }
     .add:hover {
         background-color: #F75D5D;
@@ -152,6 +164,7 @@
 
     .todoBox {
         order: 2;
+        padding: 2rem;
     }
  }
 

@@ -55,16 +55,37 @@
 
 <div class="container">
 <main>
- 	<div  class="spannAll">
-        <h1 in:fly="{{ x: -400, duration: 1000, delay: 1000 }}" out:fly="{{ x: -400, duration: 300 }}">Legg til klær</h1>
-        <img in:fly="{{ x: -400, duration: 1000, delay: 1200 }}" out:fly="{{ x: -400, duration: 350 }}" id="mobileClothes" src="././img/mobil.png" alt="illustrasjon av mobil som viser klær" />
+ 	<div 
+		in:fly="{{ x: -400, duration: 1000, delay: 1000 }}" 
+		out:fly="{{ x: -400, duration: 300 }}"  
+		class="spannAll"
+	 >
+        
+		<h1 
+			in:fly="{{ x: -400, duration: 1000, delay: 1000 }}" 
+			out:fly="{{ x: -400, duration: 300 }}">
+			Legg til klær
+		</h1>
+        <img 
+			in:fly="{{ x: -400, duration: 1000, delay: 1200 }}" 
+			out:fly="{{ x: -400, duration: 350 }}" 
+			id="mobileClothes" 
+			src="././img/mobil.png" 
+			alt="illustrasjon av mobil som viser klær" 
+		/>
     </div>
 
 	<section> 
 	
-	<div in:fly="{{ x: 400, duration: 2000, delay: 1200 }}" out:fly="{{ x: 400, duration: 300 }}" class="grid">
+	<div 
+		in:fly="{{ x: 400, duration: 2000, delay: 1200 }}" 
+		out:fly="{{ x: 400, duration: 300 }}" 
+		class="grid"
+	>
 
-		<label for={uid}><img class="upload" id="label" src="././img/download.png" alt="download icon"></label>
+		<label for={uid}>
+			<img class="upload" id="label" src="././img/download.png" alt="download icon">
+		</label>
 		<input id={uid} type="file" bind:files multiple>
 		
 		{#if file}
@@ -123,12 +144,9 @@
 	grid-template-columns: repeat(4, 1fr);
 	padding: 0;
 	margin: 0;
-	 /* border: 1px solid black; */
-	 padding: 2rem;
-	 margin: auto auto;
-	 grid-column: 1/ -1;
-	 
-
+	padding: 2rem;
+	margin: auto auto;
+	grid-column: 1/ -1;
 }
 
 section {
@@ -191,24 +209,18 @@ input {
 }
 
 
-	
-
 main {
 	display: grid;
-	
 	align-content: start;
-	/* border: 1px solid black; */
 	grid-template-columns: 1fr 2fr;
 	background: rgb(227,241,248);
     background: linear-gradient(0deg, rgba(227,241,248,1) 12%, rgba(255,255,255,0.9290091036414566) 73%);
-    height: 100%;
-	
+    height: 100%;	
 }
 .spannAll {
 	grid-row: 1/-1;
 	background-color: #373F5D;
 	height: 100%;
-
 }
 
 div {
@@ -218,8 +230,7 @@ div {
 img#preview  {
 	width: 50%;
 	background-color: white;
-	
-	}
+}
 
 #label {
 	max-width: 70%;
@@ -233,70 +244,70 @@ hr {
 
 	
 form {
-	/* background-color: white; */
 	padding: 1rem;
 	margin: 0 3rem;
 }
 
 #mobileClothes {
-        width: 70%; 
-    }
+    width: 70%; 
+}
 
 
-    h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 500;
-    font-size: 3.5rem;
-    text-align: center;
-    margin-bottom: 2rem;
+h1 {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-weight: 500;
+	font-size: 3.5rem;
+	text-align: center;
+	margin-bottom: 2rem;
+	margin-top: 4rem;
 	color: white;
 }
 
 
 @media (max-width: 1200px) {
-	img#preview  {
+img#preview  {
 	width: 50%;
 	order:1;
-	}
+}
 
-	#mobileClothes {
+#mobileClothes {
 	width: 50%;
-	}
+}
 
-	form {
+form {
 	order:4;
 	margin: 0;
-	}
+}
 
-	div {
-		height: auto;
-	}
+div {
+	height: auto;
+}
 }
 
 @media (max-width: 1000px) {
-	.white {
+.white {
 	grid-template-columns: 1fr;	
 }
 
-	.sec2 {
+.sec2 {
 	order: 1;
 	padding-top: 1rem;
 }
-	.sec1 {
+.sec1 {
 	order: 2;
 }
 }
 
 @media (max-width: 800px) {
-    #mobileClothes {
-        width: 50%; 
-    }
+#mobileClothes {
+    width: 50%; 
+}
 
-	main {
-		grid-template-columns: 1fr;
-	}
+main {
+	grid-template-columns: 1fr;
+}
 
-	section {
+section {
 	display: grid;
 	grid-template-columns:  1fr;
 }
@@ -309,16 +320,12 @@ form {
 		width: 100%;
 	}
 
-	.grid {
+.grid {
 	grid-template-columns: 1fr;
 	padding: 0;
 	margin: 0;
-	 
-	 padding: 2rem; 
-	
-	  grid-column: 1/ -1;
-	 
-
+	padding: 2rem; 
+	grid-column: 1/ -1;
 }
 }
 

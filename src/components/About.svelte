@@ -18,28 +18,37 @@ import FlipCard from "./FlipCard.svelte"
    <main>
    
 
-   <div in:fly="{{ x: -400, duration: 1000, delay: 1000 }}" out:fly="{{ x: -400, duration: 300 }}"  class="infoBox">
-         <!-- <LoaderCircle /> -->
-         <img src="././img/sustain.png" alt="illustrasjon av hånd som holder en plante" class="illustration" />
+   <div 
+    in:fly="{{ x: -400, duration: 1000, delay: 1000 }}" 
+    out:fly="{{ x: -400, duration: 300 }}"  
+    class="infoBox"
+   >
+    
+        <img src="././img/sustain.png" alt="illustrasjon av hånd som holder en plante" class="illustration" />
         <h2>C.I.R.C.L.E. = C.L.E.</h2>
         <p>C.L.E. er et konspet som bygger på bærekraft. Der man skal skape sirkulasjon i garderoben, ved å gi oversikt til brukeren. Dette ved å tilby interaksjon mellom siden og brukeren, der de kan laste opp klærne sine, lage lister og sjekke været.</p>
-
         <FlipCard />
-       
-    
     </div>
 
     <div>
-        <h1 in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" out:fly="{{ x: 400, duration: 300 }}">Grønnere klesforbruk</h1>
+        <h1 
+            in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" 
+            out:fly="{{ x: 400, duration: 300 }}"
+        >
+            Grønnere klesforbruk
+        </h1>
 
-        <div in:fly="{{ x: 400, duration: 1000, delay: 1200 }}" out:fly="{{ x: 400, duration: 300 }}" class="facts">
+        <div 
+            in:fly="{{ x: 400, duration: 1000, delay: 1200 }}" 
+            out:fly="{{ x: 400, duration: 300 }}" 
+            class="facts"
+        >
             <div>
                 <h3>Produksjon og forbruk av klær har stor innvirkning på miljøet. Ved å forlenge levetiden kan vi bidra til et mer bærekraftig forbruk.</h3>
                 <p>I EU er tekstiler det fjerde mest miljøbelastende forbruksområdet etter bolig, transport og mat. For å nå et mer bærekraftig forbruk av klær må vi få en mer miljøvennlig klesproduksjon med krav til kvalitet og design for lang levetid og et livssyklusperspektiv. Bærekraft innebærer også en produksjon som støtter sosial bærekraft. </p>
             </div>
            
             <div>
-                
                 <img in:fly="{{ x: 500, duration: 1000, delay: 1400 }}" out:fly="{{ x: 400, duration: 300 }}" class="illustration" src="././img/klesskap.png" alt="illustrasjon av klesskap" />
             </div>
             <div>
@@ -54,15 +63,8 @@ import FlipCard from "./FlipCard.svelte"
 
                 «Gjenbruk, både i nordiske land og i andre områder i verden, gir utvilsomt de største miljømessige fordelene sammenlignet med gjenvinning», konkluderer rapporten.</p>
             </div>
-        
-    
         </div>
-
-        
-
-    
     </div>
-    
    </main>
   
 
@@ -104,9 +106,10 @@ import FlipCard from "./FlipCard.svelte"
     }
 
     h3 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 1.2rem;
         padding: 0 1.2rem ;
-        font-weight: 500;
+        font-weight: 800;
         text-align: left;
         margin: 0;
     }
@@ -128,27 +131,17 @@ import FlipCard from "./FlipCard.svelte"
          text-align: center;
      }
 
-    
-    
-
     .infoBox {
         background-color: #373F5D;
         color: white;
         height: 100%;
-        padding-bottom: 2rem;
-        
-        
+        padding-bottom: 2rem; 
     }
 
     .illustration {
         width: 60%; 
     }
 
-    
-
-
-
- 
 
     @media (max-width: 1100px) {
         main {
@@ -190,14 +183,8 @@ import FlipCard from "./FlipCard.svelte"
     main {
         height: auto;
     }
-
-
-
     }
 
-@media (max-width: 500px) {
-    
-}
 
     
   </style>

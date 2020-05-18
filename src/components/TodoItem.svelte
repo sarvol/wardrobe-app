@@ -59,8 +59,6 @@
          display: grid;
          grid-template-columns: 5fr 1fr 1fr;
          background-color: white;
-         /* border-top: 1px solid #F75D5D;
-         border-bottom: 1px solid #F75D5D; */
          text-align: left;
          padding: 0.3rem;
         
