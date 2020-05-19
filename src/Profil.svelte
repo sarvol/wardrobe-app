@@ -1,11 +1,10 @@
 
 
 <script>
-import { fly, fade } from 'svelte/transition';
+import { fly, fade } from 'svelte/transition'
 import {auth, googleProvider} from "./firebase.js"
 import {authState} from "rxfire/auth"
 import Add from "./components/Add.svelte"
-
 import LogIn from "./LogIn.svelte"
 import Valg from "./components/Valg.svelte"
 import Typewriter from 'svelte-typewriter'
@@ -65,7 +64,8 @@ const logout = () => {
 					<Typewriter  loop interval={200}>
 						<h1 id="typing" >Profil</h1>
 					</Typewriter>
-						<h3>Prøv konseptet "C.L.E.", Det gir deg verktøy til å holde orden i ditt klesskap. Ved å dokumneter hva du allrede eier, og sette de sammen til nye stiler, uten å møtte rote rundt fysisk i klesskapet. </h3>
+						<h3>Prøv konseptet "C.L.E.", Det gir deg verktøy til å holde orden i ditt klesskap. Ved å dokumentere hva du allerede eier, og sette de sammen til nye stiler, uten å møtte rote rundt fysisk i klesskapet.
+						 </h3>
 				</div>
 				
 			</div>

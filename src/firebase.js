@@ -8,7 +8,7 @@ import "firebase/auth"
 // Kode fra Firebase
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "",
+    apiKey: "YOUR API KEY",
     authDomain: "firestore-og-annet-moro.firebaseapp.com",
     databaseURL: "https://firestore-og-annet-moro.firebaseio.com",
     projectId: "firestore-og-annet-moro",

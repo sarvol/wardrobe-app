@@ -27,8 +27,8 @@
 }
 
   :root {
-    --bredde: 30rem;
-     --hoyde: 30rem;
+    --bredde: 20rem;
+     --hoyde: 20rem;
    
 }
 /* 
@@ -83,6 +83,19 @@ img {
     object-position: bottom center;
 }
 
+
+
+
+@media (max-width: 800px) {
+ 
+ /* img {
+    width: 10rem;
+    height: 10rem;
+
+} */
+
+
+}
 
 
 </style>

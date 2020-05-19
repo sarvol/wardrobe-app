@@ -6,7 +6,7 @@ import axios from "axios"
 import Loader from "./Loader.svelte"
 
 
-const appid_openweather = ""
+const appid_openweather = "YOUR API KEY"
 let loading = false
 let city = "" 
 let temp = ""
@@ -232,6 +232,7 @@ let rain =""
 
     .weatherBox {
         width: 100%;
+        padding-bottom: 2rem;
         order: 2;
        
     }

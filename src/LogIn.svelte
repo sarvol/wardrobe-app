@@ -4,7 +4,6 @@
 import {auth, googleProvider} from "./firebase.js"
 import {authState} from "rxfire/auth"
 import Typewriter from 'svelte-typewriter'
-import LoaderCircle from './/components/LoaderCircle.svelte'
 
 
 
@@ -36,7 +35,7 @@ const logout = () => {
     
     <h1>Har du kontroll på klesskapet ditt?</h1>
     
-    <h3>Prøv konseptet "C.L.E.", Det gir deg verktøy til å holde orden i ditt klesskap. Ved å dokumneter hva du allrede eier, og sette de sammen til nye stiler, uten å møtte rote rundt fysisk i klesskapet. </h3>
+    <h3>Prøv konseptet "C.L.E.", Det gir deg verktøy til å holde orden i ditt klesskap. Ved å dokumentere hva du allerede eier, og sette de sammen til nye stiler, uten å møtte rote rundt fysisk i klesskapet.</h3>
     <button on:click={login}>
     <Typewriter  loop interval={200}><p>Logg inn</p></Typewriter>
     </button>
@@ -46,16 +45,6 @@ const logout = () => {
     <img id="loginScreenPhoto" src="././img/login.png" alt="login illustration" />
     </div>
 	
-    <!-- <div class="circle">
-        <LoaderCircle />
-    </div>
-
-    <div class="cleInfoBox">
-    
-    <h1>Om konseptet</h1>  
-    
-    <h3>Prøv konseptet "C.L.E.", Det gir deg verktøy til å holde orden i ditt klesskap. Ved å dokumneter hva du allrede eier, og sette de sammen til nye stiler, uten å møtte rote rundt fysisk i klesskapet. </h3>
-    </div> -->
 
 </main>	
 
@@ -140,39 +129,29 @@ img#loginScreenPhoto {
     margin: auto auto;
 }
 
-/* .cleInfoBox {
-    height: 70vh;
-    margin-left: 8rem;
-    width: 50vw;
-}
-
-
-#cle {
-    font-weight: 500;
-    font-size: 3.5rem;
-} */
-
 
 
 @media (max-width: 800px) {
-    img  {
-    width: 100%;
+ img#loginScreenPhoto {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 main {
 	display: grid;
     flex-flow: column;
-    padding: 3rem;
+    padding: 0 3rem 3rem;
     grid-template-columns: 1fr;
 	
 }
 
 
 .photo { 
-    order: 1; 
-    
-
-
+    order: 1;
+    height: auto;
 }
 .login { 
     order: 2;  
@@ -180,25 +159,21 @@ main {
     padding: 0;
 }
 
-/* .cleInfoBox {
-    order: 4;
-}
-
-.circle {
-    order: 3;
-    
-} */
 
 h1 {
-    margin-top: 0; 
+    margin-top: 0;
+    margin-bottom: 0;
     padding-top: 0;
 }
 
 h3 {
-    padding: 3rem;
+    padding: 1rem 3rem 0.4rem 3rem;
+    margin-top: 0;
 }
 
-
+button {
+    margin-top: 0.4rem;
+}
 
 } 
 

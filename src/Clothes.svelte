@@ -65,7 +65,8 @@ const logout = () => {
 					<Typewriter  loop interval={200}>
 						<h1 id="typing" >Klesskap</h1>
 					</Typewriter>
-						<h3>Prøv konseptet "C.L.E.", Det gir deg verktøy til å holde orden i ditt klesskap. Ved å dokumneter hva du allrede eier, og sette de sammen til nye stiler, uten å møtte rote rundt fysisk i klesskapet. </h3>
+						<h3>I det virtuelle klesskapet har du full oversikt over klærne du eier. Her kan man bla igjennom dem, sortere den, sette sammen nye kombinasjoner eller lage lister over det du skulle trenge. Alt uten å møtte rote rundt i det fysiske klesskapet. Det har aldri vært lettere.
+						 </h3>
 				</div>
 				
 			</div>

@@ -8,7 +8,7 @@
     let overskrift = ""
     let item
     let typer = ["underdel", "overdel"]
-    let numItems = 50
+    let numItems = 50 //samstemmer ikke med antall klær
 
   
             
@@ -262,11 +262,16 @@ h1 {
 nav {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
-		
+    width: 100%;
+    padding: 2rem 0;	
 	}
 
+    h1 {
+    padding: 1rem;    
+}
+
+
 .clothing {
-   
     display: grid;
     grid-template-columns: 1fr;
 }

@@ -1,6 +1,5 @@
 /node_modules/
 /public/build/
 
-/src/apiKeys.js
-/src/firebase.js
+
 .DS_Store

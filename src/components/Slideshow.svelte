@@ -11,6 +11,7 @@ let typer = ["underdel", "overdel"]
 
 
 
+
 let wardrobe = db.collection("wardrobe")
 
     wardrobe
@@ -22,13 +23,26 @@ let wardrobe = db.collection("wardrobe")
 
 
 
+// ikke ferdig funksjon - fungerer ikke 
+
+let currentComponent = 0;
+	const prev = () => currentComponent < 1
+			 ? currentComponent = clothes.length - 1
+			 : currentComponent--;
+    
+    const next = () => currentComponent >= clothes.length - 1 
+			? currentComponent = 0
+			: currentComponent++;
+	
+
 </script>
 
 
 
 <main>
+<div class="all">
 <section 
-in:fly="{{ x: -500, duration: 1000, delay: 1000 }}" out:fly="{{ x: -400, duration: 300 }}"   
+in:fly="{{ x: 500, duration: 1000, delay: 1000 }}" out:fly="{{ x: 400, duration: 300 }}"   
 class="container" >
             
             <div class="slide-wrapper">
@@ -36,45 +50,90 @@ class="container" >
                 <div class="slides">
                     {#each clothes as item} 
                  
-                 <article><Slides id={item.id} data={item.data() } /></article>
+                 <article>
+                    <Slides  data={item.data() } />
+                 </article>
                 
-                    
                 {:else}
                 <div class="loader">
                     <Loader />
                 </div>
-            
         {/each}
                     
                     
                     
-                </div>
-                </div> 
+        </div>
+        </div> 
                 <nav 
                     in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" 
-                    out:fly="{{ x: -400, duration: 300 }}"
+                    out:fly="{{ x: 400, duration: 300 }}"
                 >
-                    <button >
+                    <button on:click={prev} >
                         <p><i class="arrow left"></i></p>
                     </button>	
                         
-                    <button>
+                    <button on:click={next}>
                         <p><i class="arrow right"></i></p>
                     </button>	
                 </nav>
-                
-               
                  
         </section>
+        </div>
+
+        <div class="all">
+<section 
+
+
+
+in:fly="{{ x: 500, duration: 1000, delay: 1000 }}" out:fly="{{ x: 400, duration: 300 }}"   
+class="container" >
+            
+            <div class="slide-wrapper">
+                
+                <div class="slides">
+                    {#each clothes as item} 
+                 
+                 <article>
+                    <Slides  data={item.data() } />
+                 </article>
+                
+                {:else}
+                <div class="loader">
+                    <Loader />
+                </div>
+        {/each}
+                    
+                    
+                    
+        </div>
+        </div> 
+                <nav 
+                    in:fly="{{ x: 400, duration: 1000, delay: 1000 }}" 
+                    out:fly="{{ x: 400, duration: 300 }}"
+                >
+                    <button on:click={prev} >
+                        <p><i class="arrow left"></i></p>
+                    </button>	
+                        
+                    <button on:click={next}>
+                        <p><i class="arrow right"></i></p>
+                    </button>	
+                </nav>
+                 
+        </section>
+</div>
+
 
 </main>
 
 
 <style>
 
+
+
 :root {
-    --bredde: 30rem;
-     --hoyde: 30rem;
+    --bredde: 20rem;
+     --hoyde: 20rem;
    
 }
 
@@ -83,13 +142,23 @@ class="container" >
     box-sizing: border-box;
 }
 
+main {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
 
+div.all {
+    height: auto;
+}
 
 .container {
 
     width: var(--bredde); 
     height:  var(--hoyde); 
-       
+    
     margin: auto;
     border: 4px solid white;
 }
@@ -99,10 +168,12 @@ class="container" >
     height:  var(--hoyde);
     overflow: auto;
     scroll-snap-type: x mandatory;
+    border: 1px solid black;
+    margin-top: 0.5rem; 
 }
 
 .slides {
-    width: 800%;
+    width: 100%;
     height:  var(--hoyde);
     background-color: orange;
     display: grid;
@@ -115,12 +186,6 @@ class="container" >
     scroll-snap-align: center;
 }
 
-.slides article img {
-    width: var(--bredde);
-    height: var(--hoyde);
-    object-fit: cover;
-    object-position: bottom center;
-}
 
 
 
@@ -133,7 +198,7 @@ nav {
 		display: grid;
 		grid-template-columns: 1fr  1fr;
 		gap: 2rem;
-        width: 30rem;
+        
         margin: auto auto;
         padding: 1rem;
         transform: translateY(-2.5rem);
@@ -175,5 +240,34 @@ nav {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
+
+
+
+
+ /* @media (max-width: 800px) {
+ 
+ .container {
+
+    width: 10rem; 
+    height:  10rem; 
+    
+   
+}
+
+.slide-wrapper {
+    
+    height:  10rem;
+    
+}
+
+.slides {
+    
+    height:  10rem;
+   
+}
+
+} */
+
+
 
     </style>

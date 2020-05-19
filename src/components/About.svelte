@@ -4,7 +4,6 @@
 import { fly, fade } from 'svelte/transition'
 import axios from "axios"
 import Loader from "./Loader.svelte"
-import LoaderCircle from "./LoaderCircle.svelte"
 import FlipCard from "./FlipCard.svelte"
 
 
@@ -26,7 +25,8 @@ import FlipCard from "./FlipCard.svelte"
     
         <img src="././img/sustain.png" alt="illustrasjon av hånd som holder en plante" class="illustration" />
         <h2>C.I.R.C.L.E. = C.L.E.</h2>
-        <p>C.L.E. er et konspet som bygger på bærekraft. Der man skal skape sirkulasjon i garderoben, ved å gi oversikt til brukeren. Dette ved å tilby interaksjon mellom siden og brukeren, der de kan laste opp klærne sine, lage lister og sjekke været.</p>
+        <p>C.L.E. er et konsept som bygger på bærekraft. Der man skal skape sirkulasjon i garderoben, ved å gi oversikt til brukeren og hindre unødvendig kleshandel. Dette ved å tilby interaksjon mellom siden og brukeren, der de kan laste opp klærne sine, lage lister og sjekke været.
+        </p>
         <FlipCard />
     </div>
 
@@ -149,8 +149,7 @@ import FlipCard from "./FlipCard.svelte"
     }
 
     .infoBox {
-        width: 25rem;
-        height: 35rem;
+        width: 100%;
         order: 2;
         margin: auto auto;
     }
@@ -174,6 +173,7 @@ import FlipCard from "./FlipCard.svelte"
         order: 2;
         margin: auto auto;
         margin-top: 3rem;
+        width: 100%;
     }
 
     .illustration { 

@@ -6,7 +6,7 @@ import Wardrobe from "./Wardrobe.svelte"
 import LoaderCircle from "./LoaderCircle.svelte"
 import LogIn from ".././Login.svelte"
 import Loader from "./Loader.svelte"
-import Slideshow from './Slideshow.svelte'
+import MainSlideshow from './MainSlideshow.svelte'
 import Todos from './Todos.svelte'
 
 
@@ -60,7 +60,7 @@ export let menu = 1;
 			{#if  menu === 1 }
 			<Wardrobe  />
 			{:else if menu === 2}
-			<Slideshow  />
+			<MainSlideshow  />
 			
 			{:else if menu === 3}
 			 <Todos uid={user.uid} />  

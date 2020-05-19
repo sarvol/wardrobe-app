@@ -44,7 +44,7 @@
    
    <div class="todoInput">
         <input bind:value={text}>
-        <button class="add" on:click={add}>Add</button>
+        <button class="add" on:click={add}>+</button>
    </div>
 
 <div 
@@ -125,6 +125,7 @@
         color: #F75D5D;
         border: #F75D5D;
         width: 5.5rem;
+        
     }
     .add:hover {
         background-color: #F75D5D;
