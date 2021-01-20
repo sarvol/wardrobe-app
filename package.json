@@ -20,7 +20,7 @@
     "@expo/vector-icons": "^10.2.0",
     "axios": "^0.19.2",
     "firebase": "^7.9.3",
-    "gsap": "^3.2.6",
+    "gsap": "^3.6.0",
     "rxfire": "^3.9.15",
     "rxjs": "^6.5.4",
     "sirv-cli": "^0.4.4",
